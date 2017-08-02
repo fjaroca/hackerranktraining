@@ -2,8 +2,14 @@ public class WelcomeToJava {
 
     public static void main (String[] args){
 
-        System.out.println("Hello, World.");
-        System.out.println("Helo, Java.");
+        String palabraUno = "World";
+        String palabraDos = "Java";
+        String saludo = "Hello, %s";
+        String saludoPrintUno = String.format(saludo,palabraUno);
+        String saludoPrintDos = String.format(saludo,palabraDos);
+
+        System.out.println(saludoPrintUno);
+        System.out.println(saludoPrintDos);
 
     }
 
