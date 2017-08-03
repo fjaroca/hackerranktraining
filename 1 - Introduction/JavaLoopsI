@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        scan.close();
+
+        for(int multiplicador = 1; multiplicador<11; multiplicador++){
+            int result = num * multiplicador;
+            System.out.println(num + " x " + multiplicador + " = " + result);
+        }
+    }
+}
