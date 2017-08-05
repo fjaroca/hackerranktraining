@@ -19,13 +19,13 @@ public class JavaCurrencyFormatter {
 
         while (iterator.hasNext()){
 
-        String pais = iterator.next();
-        Locale codigoPais = mapaPaises.get(iterator);
+            String pais = iterator.next();
+            Locale codigoPais = mapaPaises.get(pais);
 
-        NumberFormat nf = NumberFormat.getCurrencyInstance(codigoPais);
-        String monedaPais = nf.format(payment);
+            NumberFormat nf = NumberFormat.getCurrencyInstance(codigoPais);
+            String monedaPais = nf.format(payment);
 
-        System.out.println(pais + ": " + monedaPais);
+            System.out.println(pais + ": " + monedaPais);
 
         }
     }
