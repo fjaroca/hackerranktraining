@@ -8,20 +8,25 @@ public class JavaCurrencyFormatter {
         double payment = scanner.nextDouble();
         scanner.close();
 
-        NumberFormat nf1 = NumberFormat.getCurrencyInstance(Locale.US);
-        String us = nf1.format(payment);
-        System.out.println("US: " + us);
+        Map <String, Locale> mapaPaises = new LinkedHashMap <String,Locale>();
 
-        NumberFormat nf2 = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
-        String india = nf2.format(payment);
-        System.out.println("India: " + india);
+        mapaPaises.put("US", Locale.US);
+        mapaPaises.put("India", new Locale("en", "IN"));
+        mapaPaises.put("China", Locale.CHINA);
+        mapaPaises.put("France", Locale.FRANCE);
 
-        NumberFormat nf3 = NumberFormat.getCurrencyInstance(Locale.CHINA);
-        String china = nf3.format(payment);
-        System.out.println("China: " + china);
+        Iterator <String> iterator = mapaPaises.keySet().iterator();
 
-        NumberFormat nf4 = NumberFormat.getCurrencyInstance(Locale.FRANCE);
-        String france = nf4.format(payment);
-        System.out.println("France: " + france);
+        while (iterator.hasNext()){
+
+        String pais = iterator.next();
+        Locale codigoPais = mapaPaises.get(iterator);
+
+        NumberFormat nf = NumberFormat.getCurrencyInstance(codigoPais);
+        String monedaPais = nf.format(payment);
+
+        System.out.println(pais + ": " + monedaPais);
+
+        }
     }
 }
