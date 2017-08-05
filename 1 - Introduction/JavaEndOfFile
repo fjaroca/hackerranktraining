@@ -4,16 +4,14 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class JavaEndOfFile {
+public class Solution {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int numLinea = 1;
 
-        while (scan.hasNext()==true){
+        for (int numLinea = 1;scan.hasNext();numLinea++){
             String texto = scan.nextLine();
             System.out.println(numLinea + " " + texto);
-            numLinea++;
         }
     }
 }
