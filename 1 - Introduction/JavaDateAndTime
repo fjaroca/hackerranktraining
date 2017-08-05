@@ -20,25 +20,25 @@ public static String getDay(String day, String month, String year) {
         int diaSemana = fechaCalendario.get(Calendar.DAY_OF_WEEK);
 
         switch(diaSemana){
-            case 1:
+            case Calendar.SUNDAY:
                 diaSemanaFinal = "SUNDAY";
                 break;
-            case 2:
+            case Calendar.MONDAY:
                 diaSemanaFinal = "MONDAY";
                 break;
-            case 3:
+            case Calendar.TUESDAY:
                 diaSemanaFinal = "TUESDAY";
                 break;
-            case 4:
+            case Calendar.WEDNESDAY:
                 diaSemanaFinal = "WEDNESDAY";
                 break;
-            case 5:
+            case Calendar.THURSDAY:
                 diaSemanaFinal = "THURSDAY";
                 break;
-            case 6:
+            case Calendar.FRIDAY:
                 diaSemanaFinal = "FRIDAY";
                 break;
-            case 7:
+            case Calendar.SATURDAY:
                 diaSemanaFinal = "SATURDAY";
                 break;
         }
