@@ -1,0 +1,32 @@
+import java.util.*;
+import java.text.*;
+
+public class JavaCurrencyFormatter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+
+        Map <String, Locale> mapaPaises = new LinkedHashMap <String,Locale>();
+
+        mapaPaises.put("US", Locale.US);
+        mapaPaises.put("India", new Locale("en", "IN"));
+        mapaPaises.put("China", Locale.CHINA);
+        mapaPaises.put("France", Locale.FRANCE);
+
+        Iterator <String> iterator = mapaPaises.keySet().iterator();
+
+        while (iterator.hasNext()){
+
+            String pais = iterator.next();
+            Locale codigoPais = mapaPaises.get(pais);
+
+            NumberFormat nf = NumberFormat.getCurrencyInstance(codigoPais);
+            String monedaPais = nf.format(payment);
+
+            System.out.println(pais + ": " + monedaPais);
+
+        }
+    }
+}
