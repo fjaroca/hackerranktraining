@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+
+        for (int numLinea = 1;scan.hasNext();numLinea++){
+            String texto = scan.nextLine();
+            System.out.println(numLinea + " " + texto);
+        }
+    }
+}
