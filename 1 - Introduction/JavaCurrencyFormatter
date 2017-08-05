@@ -1,0 +1,27 @@
+import java.util.*;
+import java.text.*;
+
+public class JavaCurrencyFormatter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+
+        NumberFormat nf1 = NumberFormat.getCurrencyInstance(Locale.US);
+        String us = nf1.format(payment);
+        System.out.println("US: " + us);
+
+        NumberFormat nf2 = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
+        String india = nf2.format(payment);
+        System.out.println("India: " + india);
+
+        NumberFormat nf3 = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        String china = nf3.format(payment);
+        System.out.println("China: " + china);
+
+        NumberFormat nf4 = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        String france = nf4.format(payment);
+        System.out.println("France: " + france);
+    }
+}
