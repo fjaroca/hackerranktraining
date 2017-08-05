@@ -1,0 +1,59 @@
+import java.util.Calendar;
+import java.util.Scanner;
+
+public class JavaDateAndTime{
+public static String getDay(String day, String month, String year) {
+        Calendar fechaCalendario = Calendar.getInstance();
+
+        String diaSemanaFinal = "";
+
+
+        int yearEntero = Integer.parseInt(year);
+        int monthEntero = Integer.parseInt(month);
+        int dayEntero = Integer.parseInt(day);
+
+
+        fechaCalendario.set(Calendar.YEAR, yearEntero);
+        fechaCalendario.set(Calendar.MONTH, monthEntero-1);
+        fechaCalendario.set(Calendar.DAY_OF_MONTH, dayEntero);
+
+        int diaSemana = fechaCalendario.get(Calendar.DAY_OF_WEEK);
+
+        switch(diaSemana){
+            case 1:
+                diaSemanaFinal = "SUNDAY";
+                break;
+            case 2:
+                diaSemanaFinal = "MONDAY";
+                break;
+            case 3:
+                diaSemanaFinal = "TUESDAY";
+                break;
+            case 4:
+                diaSemanaFinal = "WEDNESDAY";
+                break;
+            case 5:
+                diaSemanaFinal = "THURSDAY";
+                break;
+            case 6:
+                diaSemanaFinal = "FRIDAY";
+                break;
+            case 7:
+                diaSemanaFinal = "SATURDAY";
+                break;
+        }
+
+        return diaSemanaFinal;
+
+    }
+
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String month = in.next();
+        String day = in.next();
+        String year = in.next();
+
+        System.out.println(getDay(day, month, year));
+    }
+}
