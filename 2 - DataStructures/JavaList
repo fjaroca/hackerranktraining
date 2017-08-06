@@ -19,17 +19,17 @@ public class JavaList {
         }
         int query = scan.nextInt();
 
-        while(query --> 0){
+        while(query-- > 0){
             scan.nextLine();
             String queryValue = scan.nextLine();
 
             if(queryValue.equals("Insert")){
                 int positionInsert = scan.nextInt();
                 int value = scan.nextInt();
-                list.add(positionInsert-1, value);
+                list.add(positionInsert, value);
             }else{
                 int positionDelete = scan.nextInt();
-                list.remove(positionDelete-1);
+                list.remove(positionDelete);
             }
         }
 
