@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class JavaSubarray {
+
+
+
+    public static void main(String[] args) {
+        int negativeValue = 0;
+        Scanner scan = new Scanner(System.in);
+        int arraySize = scan.nextInt();
+        int [] myArray = new int[arraySize];
+
+        for (int i=0; i<arraySize ; i++){
+            int arrayValue = scan.nextInt();
+            myArray [i] = arrayValue;
+        }
+
+        for (int i=0; i<arraySize ; i++){
+            for (int j=0 ; j <arraySize ; j++){
+                if (myArray[i]-myArray[j]<0){
+                    negativeValue++;
+                }
+            }
+        }
+        System.out.println(negativeValue);
+    }
+}
