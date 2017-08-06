@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class JavaList {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int arraySize = scan.nextInt();
+        List<Integer> list = new ArrayList<Integer>();
+
+        for (int i=0; i<arraySize ; i++){
+
+            int arrayValue = scan.nextInt();
+            list.add(arrayValue);
+
+        }
+        int query = scan.nextInt();
+
+        while(query --> 0){
+            scan.nextLine();
+            String queryValue = scan.nextLine();
+
+            if(queryValue.equals("Insert")){
+                int positionInsert = scan.nextInt();
+                int value = scan.nextInt();
+                list.add(positionInsert-1, value);
+            }else{
+                int positionDelete = scan.nextInt();
+                list.remove(positionDelete-1);
+            }
+        }
+
+        for (int i = 0; i<list.size(); i++){
+            System.out.print(list.get(i) + " ");
+        }
+
+    }
+}
