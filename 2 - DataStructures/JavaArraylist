@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class JavaArraylist {
+
+    public static void main(String[] args) {
+        ArrayList[] myArray = new ArrayList[20002];
+        Scanner scan = new Scanner(System.in);
+        int arraySize = scan.nextInt();
+
+        for (int i=1; i<=arraySize ; i++){
+            myArray[i] = new ArrayList();
+            int subArraySize = scan.nextInt();
+
+            for (int j = 1; j <= subArraySize ; j++){
+                int value = scan.nextInt();
+                myArray[i].add(value);
+            }
+        }
+
+        int query = scan.nextInt();
+
+        for (int k = 1; k<=query ; k++){
+
+            int axisX = scan.nextInt();
+            int axisY = scan.nextInt();
+
+            try{
+                System.out.println (myArray[axisX].get(axisY-1));
+            }
+            catch (Exception e){
+                System.out.println ("ERROR!");
+            }
+        }
+
+    }
+}
