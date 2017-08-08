@@ -27,9 +27,9 @@ class StudentComparator implements Comparator<Student>{
         double cgpa1 = s1.getCgpa();
         double cgpa2 = s2.getCgpa();
 
-        //Aqui falta la condicion para ordenar.
+        int resultado = new Double(Math.ceil(cgpa1-cgpa2)).intValue();
 
-        return cgpa1 - cgpa2;
+        return resultado;
     }
 
 }
