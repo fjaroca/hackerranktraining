@@ -17,10 +17,10 @@ public class JavaHashset {
             pair_right[i] = s.next();
         }
 
-        HashSet<String> myhash = new HashSet<String>();
+        HashSet<String> mySet = new HashSet<String>();
         for (int i = 0; i < t; i++) {
-            myhash.add(pair_left[i]+"#"+pair_right[i]);
-            System.out.println(myhash.size());
+            mySet.add(pair_left[i]+"#"+pair_right[i]);
+            System.out.println(mySet.size());
         }
  }
 }
