@@ -6,8 +6,8 @@ class Printer
 {
     public void printArray(Object[] arrayList) {
 
-        for (int i=0; i<arrayList.length; i++){
-            System.out.println(arrayList[i]);
+        for (Object o : arrayList){
+            System.out.println(o);
         }
     }
 
