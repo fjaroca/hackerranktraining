@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+
+class JavaMap{
+   public static void main(String []argh)
+   {
+      Map <String, Integer> agenda = new LinkedHashMap<String,Integer>();
+      Scanner in = new Scanner(System.in);
+      int n=in.nextInt();
+      in.nextLine();
+      for(int i=0;i<n;i++)
+      {
+         String name=in.nextLine();
+         int phone=in.nextInt();
+         in.nextLine();
+         agenda.put(name, phone);
+      }
+      while(in.hasNext())
+      {
+         String s=in.nextLine();
+         if(agenda.containsKey(s)){
+             String patron = "%s=%d";
+             String resultado = String.format(patron, s, agenda.get(s));
+             System.out.println(resultado);
+         }else{
+             System.out.println("Not found");
+         }
+      }
+   }
+}
