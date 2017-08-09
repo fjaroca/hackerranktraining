@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class JavaStringsIntroduction {
+
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        int sizeString = A.length()+B.length();
+        System.out.println(sizeString);
+        if(A.compareTo(B)>1){
+            System.out.println("Yes");
+        }else{
+            System.out.println("No");
+        }
+        String myString = new StringBuilder()
+                .append(A.substring(0,1).toUpperCase())
+                .append(A.substring(1))
+                .append(" ")
+                .append(B.substring(0,1).toUpperCase())
+                .append(B.substring(1))
+                .toString();
+
+        System.out.println(myString);
+
+    }
+}
