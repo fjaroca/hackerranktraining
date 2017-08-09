@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class JavaStringTokens {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        String[] myArray = s.split("[ ,!?']+");
+        System.out.println(myArray.length);
+        for(String contenido : myArray){
+            System.out.println(contenido);
+        }
+        scan.close();
+
+
+    }
+}
