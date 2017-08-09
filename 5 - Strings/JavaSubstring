@@ -11,9 +11,6 @@ public class JavaSubstring {
         String S = in.next();
         int start = in.nextInt();
         int end = in.nextInt();
-        String myString = new StringBuilder()
-            .append(S.substring(start,end))
-            .toString();
-        System.out.println(myString);
+        System.out.println(S.substring(start,end));
     }
 }
