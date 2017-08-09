@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class JavaAnagrams {
+
+    static boolean isAnagram(String a, String b) {
+
+        char[] myArray1 = new char[a.length()];
+        char[] myArray2 = new char[b.length()];
+
+        a.getChars(0, a.length(),myArray1,0);
+        b.getChars(0, b.length(),myArray2,0);
+
+        Arrays.sort(myArray1);
+        Arrays.sort(myArray2);
+
+        boolean anagram=myArray1.equals(myArray2);
+
+        return anagram;
+    }
+
+public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+    String a = scan.next();
+    String b = scan.next();
+    scan.close();
+    boolean ret = isAnagram(a, b);
+    System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+  }
+}
