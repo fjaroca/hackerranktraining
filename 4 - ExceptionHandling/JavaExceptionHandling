@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class JavaExceptionHandling {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        try{
+            int x = scan.nextInt();
+            int y = scan.nextInt();
+            int resultado = x/y;
+            System.out.println(resultado);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+
+    }
+}
