@@ -8,13 +8,13 @@ public class JavaAnagrams {
         char[] myArray1 = new char[a.length()];
         char[] myArray2 = new char[b.length()];
 
-        a.getChars(0, a.length(),myArray1,0);
-        b.getChars(0, b.length(),myArray2,0);
+        a.toLowerCase().getChars(0, a.length(),myArray1,0);
+        b.toLowerCase().getChars(0, b.length(),myArray2,0);
 
         Arrays.sort(myArray1);
         Arrays.sort(myArray2);
 
-        boolean anagram=myArray1.equals(myArray2);
+        boolean anagram=Arrays.equals(myArray1,myArray2);
 
         return anagram;
     }
