@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class anagrama {
+
+    static boolean isAnagram(String a, String b) {
+
+        if(a.equalsIgnoreCase(b)){
+            return true;
+        }else if (a.length()!=b.length()){
+            return false;
+        }else {
+            char[] myArray1 = a.toLowerCase().toCharArray();
+            char[] myArray2 = b.toLowerCase().toCharArray();
+
+            Arrays.sort(myArray1);
+            Arrays.sort(myArray2);
+
+            return Arrays.equals(myArray1, myArray2);
+        }
+    }
+
+public static void main(String[] args) {
+
+    Scanner scan = new Scanner(System.in);
+    String a = scan.next();
+    String b = scan.next();
+    scan.close();
+    boolean ret = isAnagram(a, b);
+    System.out.println( (ret) ? "Anagrams" : "Not Anagrams" );
+  }
+}
