@@ -5,7 +5,7 @@ public class anagrama {
 
     static boolean isAnagram(String a, String b) {
 
-        if(a.equals(b)){
+        if(a.equalsIgnoreCase(b)){
             return true;
         }else if (a.length()!=b.length()){
             return false;
