@@ -1,22 +1,23 @@
 import java.io.*;
 import java.util.*;
 
-public class JavaAnagrams {
+public class anagrama {
 
     static boolean isAnagram(String a, String b) {
 
-        char[] myArray1 = new char[a.length()];
-        char[] myArray2 = new char[b.length()];
+        if(a.equals(b)){
+            return true;
+        }else if (a.length()!=b.length()){
+            return false;
+        }else {
+            char[] myArray1 = a.toLowerCase().toCharArray();
+            char[] myArray2 = b.toLowerCase().toCharArray();
 
-        a.toLowerCase().getChars(0, a.length(),myArray1,0);
-        b.toLowerCase().getChars(0, b.length(),myArray2,0);
+            Arrays.sort(myArray1);
+            Arrays.sort(myArray2);
 
-        Arrays.sort(myArray1);
-        Arrays.sort(myArray2);
-
-        boolean anagram=Arrays.equals(myArray1,myArray2);
-
-        return anagram;
+            return Arrays.equals(myArray1, myArray2);
+        }
     }
 
 public static void main(String[] args) {
