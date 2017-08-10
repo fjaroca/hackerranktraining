@@ -17,7 +17,7 @@ public class GreetingController {
                 String.format(template, name));
     }
 
-    String idUsuario="";
+
     @RequestMapping("/greeting/{idUsuario}")
     public Greeting hola(@PathVariable String idUsuario){
 
